@@ -1,0 +1,269 @@
+#trTemp{
+
+    background-color:transparent ;
+}
+
+body {
+    padding: 40px 0px;
+}
+.lala{
+    position: relative;
+    /*height: 50%;*/
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+body, #slider, .wrap, .slide-content{
+    margin:0;
+    padding:0;
+    font-family: Arial,Helvetica, sans-serif;
+    width: 100%;
+    height:100vh;
+    overflow-x: hidden;
+}  
+.wrap{position:relative}
+
+.slide{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span{
+    font-size: 5rem;
+    color:white;
+}
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    margin-top: -50px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+
+#arrow-left{
+    border-width: 30px 40px 30px 0;
+    border-color: transparent white transparent transparent;
+    left: 0;
+    margin-left: 30px;
+}
+#arrow-right{
+    border-width: 30px 0 30px 40px;
+    border-color: transparent transparent transparent white;
+    right: 0;
+    margin-left: 30px;
+}
+
+
+body {
+    position: fixed;
+    /*background: #F1F3FA;*/
+}
+
+/* Profile container */
+.profile {
+    margin: 30px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: transparent;
+}
+
+.profile-userpic img {
+    float: none;
+    margin-top: 0px;
+    margin-right: 12px;
+    margin-bottom: 0px;
+    margin-left: 51px;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #94c1f1;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    color: #00d2ff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+    /*text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;*/
+}
+
+.profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+}
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+/*.profile-usermenu ul li {
+    border-bottom: 1px solid;
+}*/
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #5b9bd1;
+    font-size: 14px;
+    font-weight: 400;
+    border-left: 2px solid #5b9bd1;/*
+    border-top: 2px solid;*/
+    border-bottom: 2px solid;
+    border-right:2px solid;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+    color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    border-left: 2px solid #5b9bd1;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-right:2px solid;
+
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #b2c0ff;
+    min-height: 460px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.lala2{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.button5 {
+    border-radius: 50%;
+}
+
+/* Slide 2 */
+#slide-2 .bcg {background-image:url('https://static.pexels.com/photos/287229/pexels-photo-287229.jpeg')}
+#slide-2 .hsContent {
+    margin-left: -450px;
+    top: auto;
+}
+#slide-2 h2 {
+    position: fixed;
+    top: 70%;
+}
+/* Slide 4 */
+#slide-4 .bcg {background-image:url('https://static.pexels.com/photos/373543/pexels-photo-373543.jpeg')}
+#slide-4 .hsContent {
+    margin-left: -450px;
+    position: fixed;
+    top: 250px;
+}
+#slide-4 h2 {
+    background: none;
+    padding-left: 0;
+    padding-right: 0;
+}

@@ -1,0 +1,86 @@
+<!--
+<main>
+    <div class="container body-container">
+        <div class="row">
+            <div id="main" class="col-sm-9">
+                <div>
+                    <style>
+                        h1.e {
+                            position: static;
+                            top:100px;
+                            right: 100px;
+                        }
+                    </style>
+                    <h1 class="h1.e" style="display:inline">Email:</h1>
+                        <h1 style="display:inline"><span class="label label-primary" th:text="${user.email}"></span></h1>
+                    <h2><span th:text="${user.fullName}"></span></h2>
+                    <img style="width: 175px; height: 175px;" class="img-thumbnail"
+                         th:src="@{'data:image/jpg;base64,' + ${user.profilePicture}}"/>
+
+                    <a  th:href="@{/user/edit}">
+                        <button type="button" class="btn-primary">Edit profile</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+-->
+<div class="container">
+    <div class="row profile">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+                <!-- SIDEBAR USERPIC -->
+                <div class="profile-userpic">
+                    <img th:src="@{'data:image/jpg;base64,' + ${user.profilePicture}}" class="img-responsive" alt=""/>
+                </div>
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        <span th:text="${user.fullName}"></span>
+                    </div>
+                    <div class="profile-usertitle-job"><a href="#demo" class="btn btn-info" data-toggle="collapse">EMAIL</a>
+                        <div id="demo" class="collapse">
+                            <span th:text="${user.email}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR BUTTONS -->
+                <!--<div class="profile-userbuttons">
+                    <button type="button" class="btn btn-success btn-sm">Follow</button>
+                    <button type="button" class="btn btn-danger btn-sm">Message</button>
+                </div>-->
+                <!-- END SIDEBAR BUTTONS -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-home"></i>
+                                Edit </a>
+                        </li>
+                        <li>
+                            <a th:href="@{/user/edit}">
+                                <i class="glyphicon glyphicon-user"></i>
+                                Edit  Profile</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="glyphicon glyphicon-ok"></i>
+                                Edit </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-flag"></i>
+                                Edit </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+        </div>
+    </div>
+</div>

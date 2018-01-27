@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<header  th:fragment="header">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a th:href="@{/}" class="navbar-brand">Rumen's Blog</a>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li  sec:authorize="hasRole('ADMIN')">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" type="button"
+                           aria-expanded="false">Admin<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a th:href="@{/admin/categories/}">Categories</a></li>
+                            <li><a th:href="@{/admin/users/}">Users</a></li>
+                        </ul>
+                    </li>
+
+                  <!--  <div class="icon-bar">
+                        <a class="active-icon">
+                            <i class="fa fa-home">
+
+                            </i>
+                        </a>
+                    </div>-->
+                    <li sec:authorize="isAuthenticated()">
+                        <a th:href="@{/article/create}">
+                            Create Article
+                        </a>
+                    </li>
+
+                    <li sec:authorize="isAuthenticated()">
+                        <a th:href="@{/profile}">
+                             My Profile
+                        </a>
+                    </li>
+                    <li sec:authorize="isAuthenticated()">
+                        <a th:href="@{/logout}"><span class="glyphicon glyphicon-log-out">
+                            Logout
+                            </span>
+                        </a>
+                    </li>
+
+                    <li sec:authorize="isAnonymous()">
+                        <a th:href="@{/register}"><span class="glyphicon glyphicon-user">
+                            SIGN UP
+                            </span>
+                        </a>
+                    </li>
+                    <li sec:authorize="isAnonymous()">
+                        <a th:href="@{/login}"><span class="glyphicon glyphicon-log-in">
+                            LOGIN
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</header>
